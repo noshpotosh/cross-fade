@@ -59,11 +59,16 @@ cross-fade/
 │   │       ├── placeholder.route.ts    # HTTP handlers
 │   │       ├── placeholder.service.ts  # Business logic
 │   │       └── placeholder.repo.ts     # Data access
-│   └── html/
-│       └── index.html                  # Static HTML
+│   ├── pages/
+│       └── placeholder/
+│           ├── placeholder.html        # Page markup
+│           ├── placeholder.js          # Page scripts
+│           └── placeholder.css         # Page styles
 ├── dist/                               # Compiled output (created by npm run build)
 ├── package.json
 └── tsconfig.json
 ```
 
-API modules follow a layered structure: **route** (HTTP) → **service** (logic) → **repo** (data). Add new features by creating a folder under `src/api/` with the same three files.
+**API modules** (`src/api/`) follow a layered structure: **route** (HTTP) → **service** (logic) → **repo** (data). Add a new API by creating a folder under `src/api/` with those three files.
+
+**Pages** (`src/pages/`) hold front-end assets for individual screens. Each page gets its own folder with co-located `.html`, `.js`, and `.css` files — for example, `src/pages/placeholder/placeholder.html`.
