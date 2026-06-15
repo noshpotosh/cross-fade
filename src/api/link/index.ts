@@ -1,0 +1,1 @@
+export { linkRoute } from "@/api/link/link.route";
